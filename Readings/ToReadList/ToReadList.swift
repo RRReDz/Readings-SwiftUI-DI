@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ToReadList: View {
+    @ObservedObject private var viewModel: ToReadListViewModel
     
-    @EnvironmentObject var readingListController: ReadingListController
+    init(viewModel: ToReadListViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
-        List(readingListController.readingList) { item in
+        List(viewModel.readingList) { item in
             HStack {
                 Text(item.title)
                 Text(item.author)
@@ -23,7 +26,10 @@ struct ToReadList: View {
 
 struct ToReadList_Previews: PreviewProvider {
     static var previews: some View {
-        ToReadList()
-            .environmentObject(previewController)
+        ToReadList(
+            viewModel: ToReadListViewModel(
+                readingListController: previewController
+            )
+        )
     }
 }

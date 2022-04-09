@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		731E2A1828020E1D00BBF6A4 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E2A1728020E1D00BBF6A4 /* ViewModelFactory.swift */; };
+		731E2A1A28020E8E00BBF6A4 /* BookListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E2A1928020E8E00BBF6A4 /* BookListViewData.swift */; };
+		731E2A1C28020EA400BBF6A4 /* ToReadListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E2A1B28020EA400BBF6A4 /* ToReadListViewModel.swift */; };
+		731E2A1E28020EFE00BBF6A4 /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E2A1D28020EFE00BBF6A4 /* BookListViewModel.swift */; };
+		731E2A202802101A00BBF6A4 /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E2A1F2802101A00BBF6A4 /* BookDetailViewModel.swift */; };
 		735BFCDD2801EE9B0008CB0C /* ReadingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BFCDC2801EE9B0008CB0C /* ReadingListController.swift */; };
 		735BFCDF2801F0D50008CB0C /* ToReadList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BFCDE2801F0D50008CB0C /* ToReadList.swift */; };
 		738028002801EC8400C10752 /* ReadingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738027FF2801EC8400C10752 /* ReadingsApp.swift */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		731E2A1728020E1D00BBF6A4 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		731E2A1928020E8E00BBF6A4 /* BookListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewData.swift; sourceTree = "<group>"; };
+		731E2A1B28020EA400BBF6A4 /* ToReadListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToReadListViewModel.swift; sourceTree = "<group>"; };
+		731E2A1D28020EFE00BBF6A4 /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
+		731E2A1F2802101A00BBF6A4 /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		735BFCDC2801EE9B0008CB0C /* ReadingListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListController.swift; sourceTree = "<group>"; };
 		735BFCDE2801F0D50008CB0C /* ToReadList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToReadList.swift; sourceTree = "<group>"; };
 		738027FC2801EC8400C10752 /* Readings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Readings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +54,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		731E2A212802106B00BBF6A4 /* ToReadList */ = {
+			isa = PBXGroup;
+			children = (
+				735BFCDE2801F0D50008CB0C /* ToReadList.swift */,
+				731E2A1B28020EA400BBF6A4 /* ToReadListViewModel.swift */,
+			);
+			path = ToReadList;
+			sourceTree = "<group>";
+		};
+		731E2A222802107C00BBF6A4 /* BookList */ = {
+			isa = PBXGroup;
+			children = (
+				73845A4D2801F43700EBAB1D /* BookList.swift */,
+				731E2A1D28020EFE00BBF6A4 /* BookListViewModel.swift */,
+				731E2A1928020E8E00BBF6A4 /* BookListViewData.swift */,
+			);
+			path = BookList;
+			sourceTree = "<group>";
+		};
+		731E2A232802108700BBF6A4 /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				73845A4F2801F58100EBAB1D /* BookDetail.swift */,
+				731E2A1F2802101A00BBF6A4 /* BookDetailViewModel.swift */,
+			);
+			path = BookDetail;
+			sourceTree = "<group>";
+		};
+		731E2A242802109100BBF6A4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				73845A512801F85300EBAB1D /* PreviewData.swift */,
+				73845A532801FAE100EBAB1D /* Data.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		731E2A252802109700BBF6A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				735BFCDC2801EE9B0008CB0C /* ReadingListController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		731E2A26280210AD00BBF6A4 /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				738027FF2801EC8400C10752 /* ReadingsApp.swift */,
+				738028012801EC8400C10752 /* ContentView.swift */,
+				731E2A1728020E1D00BBF6A4 /* ViewModelFactory.swift */,
+			);
+			path = Composition;
+			sourceTree = "<group>";
+		};
 		738027F32801EC8400C10752 = {
 			isa = PBXGroup;
 			children = (
@@ -63,14 +128,12 @@
 		738027FE2801EC8400C10752 /* Readings */ = {
 			isa = PBXGroup;
 			children = (
-				738027FF2801EC8400C10752 /* ReadingsApp.swift */,
-				738028012801EC8400C10752 /* ContentView.swift */,
-				735BFCDE2801F0D50008CB0C /* ToReadList.swift */,
-				73845A4D2801F43700EBAB1D /* BookList.swift */,
-				73845A4F2801F58100EBAB1D /* BookDetail.swift */,
-				735BFCDC2801EE9B0008CB0C /* ReadingListController.swift */,
-				73845A512801F85300EBAB1D /* PreviewData.swift */,
-				73845A532801FAE100EBAB1D /* Data.swift */,
+				731E2A26280210AD00BBF6A4 /* Composition */,
+				731E2A212802106B00BBF6A4 /* ToReadList */,
+				731E2A222802107C00BBF6A4 /* BookList */,
+				731E2A232802108700BBF6A4 /* BookDetail */,
+				731E2A252802109700BBF6A4 /* Controller */,
+				731E2A242802109100BBF6A4 /* Data */,
 				738028032801EC8500C10752 /* Assets.xcassets */,
 				738028052801EC8500C10752 /* Preview Content */,
 			);
@@ -156,11 +219,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				738028022801EC8400C10752 /* ContentView.swift in Sources */,
+				731E2A1A28020E8E00BBF6A4 /* BookListViewData.swift in Sources */,
 				738028002801EC8400C10752 /* ReadingsApp.swift in Sources */,
+				731E2A202802101A00BBF6A4 /* BookDetailViewModel.swift in Sources */,
 				73845A4E2801F43700EBAB1D /* BookList.swift in Sources */,
 				735BFCDF2801F0D50008CB0C /* ToReadList.swift in Sources */,
+				731E2A1E28020EFE00BBF6A4 /* BookListViewModel.swift in Sources */,
 				735BFCDD2801EE9B0008CB0C /* ReadingListController.swift in Sources */,
+				731E2A1C28020EA400BBF6A4 /* ToReadListViewModel.swift in Sources */,
 				73845A502801F58100EBAB1D /* BookDetail.swift in Sources */,
+				731E2A1828020E1D00BBF6A4 /* ViewModelFactory.swift in Sources */,
 				73845A522801F85300EBAB1D /* PreviewData.swift in Sources */,
 				73845A542801FAE100EBAB1D /* Data.swift in Sources */,
 			);
